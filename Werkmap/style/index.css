@@ -1,0 +1,134 @@
+body {
+  background-color: #111111;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  filter: blur(2px);
+}
+
+header::before {
+  content: "";
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background: rgb(17, 17, 17);
+  background: linear-gradient(
+    0deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+header::after {
+  content: "";
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+header > * {
+  z-index: 10;
+  position: relative;
+  width: 40%;
+  color: var(--secondary-bg-color);
+  padding: 2rem;
+  max-width: 900px;
+}
+
+header h2 {
+  font-size: 5vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+header p {
+  font-size: 1.2vw;
+  font-family: "poppins";
+}
+
+header button {
+  width: fit-content;
+  margin-left: 2rem;
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+header button:hover {
+  color: var(--secondary-bg-color) !important;
+  background-color: var(--primary-color) !important;
+}
+
+/* Large screens and higher */
+@media only screen and (min-width: 1500px) {
+  header h2 {
+    font-size: 5rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large screens and lower */
+@media only screen and (max-width: 1500px) {
+  header > * {
+    width: 50%;
+  }
+  header h2 {
+    font-size: 5vw;
+  }
+
+  header p {
+    font-size: 2vw;
+  }
+}
+
+/* Small screens / tablet display */
+@media only screen and (max-width: 700px) {
+  header > * {
+    width: 100%;
+  }
+
+  header h2 {
+    font-size: 5vw;
+  }
+
+  header p {
+    font-size: 2vw;
+  }
+}
+
+/* Small screens / mobile display */
+@media only screen and (max-width: 500px) {
+  header h2 {
+    font-size: 10vw;
+  }
+
+  header p {
+    font-size: 4vw;
+  }
+}

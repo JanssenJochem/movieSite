@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #ffaa7f;
+  --primary-bg-color: #111111;
+  --secondary-color: #9c9c9c;
+  --secondary-bg-color: #deeaff;
+}
+
+::-moz-selection {
+  color: var(--secondary-bg-color);
+  background: var(--primary-color);
+}
+
+::selection {
+  color: var(--secondary-bg-color);
+  background: var(--primary-color);
+}

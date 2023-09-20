@@ -1,0 +1,147 @@
+.navigationContainer {
+  background: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  transition: 0.2s;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.responsiveNavButton {
+  display: none;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0 5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-family: "Baloo 2", cursive;
+  color: var(--secondary-color);
+  font-size: small;
+}
+
+nav form {
+  margin-left: auto;
+}
+
+nav ul a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--secondary-color);
+  margin: auto;
+  border-radius: 2rem;
+  transition: 0.2s;
+  width: 0%;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+.activeNav {
+  color: var(--primary-color);
+}
+
+.activeNav::after {
+  background-color: var(--primary-color) !important;
+  width: 100% !important;
+}
+
+nav form input {
+  background-color: var(--secondary-bg-color) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: var(--primary-color) !important;
+  font-family: "Baloo 2", cursive !important;
+  font-size: small !important;
+  height: 1.75rem !important;
+}
+
+nav form button {
+  border-color: var(--primary-color) !important;
+  height: 1.75rem !important;
+}
+
+nav form button:hover {
+  background-color: var(--primary-color) !important;
+}
+
+nav form button svg {
+  color: var(--primary-color);
+  transform: translateY(-7px);
+}
+
+nav form button:hover svg {
+  color: var(--secondary-bg-color) !important;
+}
+
+/* Large screens and higher */
+@media only screen and (min-width: 1500px) {
+}
+
+/* Large screens and lower */
+@media only screen and (max-width: 1500px) {
+}
+
+/* Small screens / tablet display */
+@media only screen and (max-width: 700px) {
+  .navigationContainer {
+    height: 0px;
+    background-color: var(--primary-bg-color) !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    overflow: hidden;
+  }
+
+  .responsiveNavButton {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+  }
+
+  .responsiveNavButton svg {
+    transform: translateY(-1px);
+  }
+
+  .responsiveNavButton:hover {
+    color: var(--secondary-bg-color) !important;
+    background-color: var(--primary-color) !important;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: 25rem;
+    justify-content: space-evenly;
+  }
+
+  nav form {
+    margin-left: 0;
+  }
+}
+
+/* Small screens / mobile display */
+@media only screen and (max-width: 500px) {
+}
